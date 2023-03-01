@@ -21,12 +21,16 @@ function parseProducts(json) {
 // Напишите цикл, в котором перебираете все products от 0 до (length - 1)
 // и выполняете addProduct с каждым элементом массива products (передавая элемент массива как аргумент)
 
+function parseProducts(json) {
+	let data = JSON.parse(json);
+	return data.products;
+}
+
 function renderProductsCards(json) {
-    clearProducts();
-      let products = parseProducts(json); 
-return products;
-      let lenght = products.length; {
-      for (let i = 0; i < length; i += 1) 
-        addProduct(products[i]);
-  }
+	clearProducts();
+	let products = parseProducts(json);
+	let length = products.length;
+	for (let i = 0; i < (length - 1); i += 1) {
+		addProduct(products[i]);
+	}
 }
